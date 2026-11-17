@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "deny": ["Bash(sudo *)", "Bash(rm -rf /*)", "Read(.env)", "Read(**/.env*)"],
+    "allow": [
+      "Bash(git:*)",
+      "Bash(npm:*)",
+      "Bash(python:*)",
+      "Bash(cargo:*)",
+      "Bash(node:*)",
+      "Read(C:/Users/trevo/**)",
+      "Read(C:/Tools/**)",
+      "Read(C:/Program Files/**)",
+      "Read(C:/Program Files (x86)/**)"
+    ]
+  }
+}

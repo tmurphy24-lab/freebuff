@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "xerj": {
+      "command": "C:\\Users\\trevo\\AppData\\Local\\Programs\\xerj\\xerj.exe",
+      "args": ["mcp"],
+      "env": {
+        "XERJ_URL": "http://localhost:9200"
+      },
+      "disabled": true
+    },
+    "rea": {
+      "command": "node",
+      "args": [
+        "C:\\Users\\trevo\\AppData\\Roaming\\npm\\node_modules\\rea-agents\\scripts\\rea.mjs",
+        "mcp"
+      ],
+      "env": {
+        "REA_ANALYSIS_PROVIDER": "ghidra",
+        "GHIDRA_INSTALL_DIR": "C:\\Tools\\ghidra_12.1.4_PUBLIC",
+        "JAVA_HOME": "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.11.10-hotspot"
+      }
+    },
+    "e2e": {
+      "command": "npx",
+      "args": ["e2e", "mcp"]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "PreToolUse": [
+    {
+      "matcher": "^(run_terminal_command|run_command|exec|bash|terminal)$",
+      "hooks": [
+        {
+          "name": "safety-guard",
+          "type": "command",
+          "command": "cmd.exe /c \"C:\\Users\\trevo\\Desktop\\.agents\\freebuff\\hooks\\safety-guard.cmd\""
+        }
+      ]
+    },
+    {
+      "matcher": ".*",
+      "hooks": [
+        {
+          "name": "procoder-commit-gate",
+          "type": "command",
+          "command": "cmd.exe /c \"C:\\Users\\trevo\\Desktop\\.agents\\freebuff\\hooks\\procoder-hook.cmd\" pre"
+        }
+      ]
+    }
+  ],
+  "PostToolUse": [
+    {
+      "matcher": "^(write_file|propose_write_file|str_replace|propose_str_replace|apply_patch|write_to_file|replace_file_content)$",
+      "hooks": [
+        {
+          "name": "format-on-save",
+          "type": "command",
+          "command": "cmd.exe /c \"C:\\Users\\trevo\\Desktop\\.agents\\freebuff\\hooks\\format-on-save.cmd\""
+        },
+        {
+          "name": "procoder-write-findings",
+          "type": "command",
+          "command": "cmd.exe /c \"C:\\Users\\trevo\\Desktop\\.agents\\freebuff\\hooks\\procoder-hook.cmd\" post"
+        }
+      ]
+    }
+  ],
+  "Stop": [
+    {
+      "matcher": ".*",
+      "hooks": [
+        {
+          "name": "procoder-handoff",
+          "type": "command",
+          "command": "cmd.exe /c \"C:\\Users\\trevo\\Desktop\\.agents\\freebuff\\hooks\\procoder-hook.cmd\" stop"
+        }
+      ]
+    }
+  ]
+}

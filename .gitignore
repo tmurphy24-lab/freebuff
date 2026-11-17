@@ -1,0 +1,24 @@
+# Freebuff Desktop finds this folder's chats through project-id; do not edit or commit it
+/project-id
+
+# credential material — never committed, and therefore never linted by the gate
+/harvested-tokens.json
+/byok/
+/get-token.cmd
+/get-token.ps1
+/get-token.py
+
+# shared workspace assets, owned outside this directory (absolute symlinks)
+/rules
+/skills
+
+# local scratch and caches
+/backup/
+__pycache__/
+*.pyc
+/.ruff_cache/
+
+# procoder runtime state — derived, never committed
+.procoder/state/
+.procoder/index/
+.lycheecache

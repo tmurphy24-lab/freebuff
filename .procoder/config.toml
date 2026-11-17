@@ -1,0 +1,13 @@
+# Procoder Configuration for Freebuff Multi-Model Desktop Agent
+[git]
+commit_gate = "block"
+
+[lint]
+policy = "block"
+
+[test]
+policy = "block"
+
+[security]
+sast_blocks_at = "ERROR"
+
