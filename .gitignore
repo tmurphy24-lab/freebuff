@@ -22,3 +22,7 @@ __pycache__/
 .procoder/state/
 .procoder/index/
 .lycheecache
+
+# .procoder/backlog/ is generated but deliberately not ignored: it stays in
+# source-audit scope, and Gitleaks scans ignored files too, so hiding it would
+# only undercount the receipt and duplicate it in the ignored sweep.
